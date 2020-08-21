@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    padding:0;
+    height: 100vh;
+}
+#root{
+    height: 100%;
+}
+.background{
+    background-position: center !important;
+    background: url('./background.jpg');
+    background-repeat:no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100vh;
+}
+.pregunta2{
+    margin-top: 500px;
+    width:500px;
+    margin-left: 460px;
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+}
+.radio2{
+    margin-top: 560px;
+    position: absolute;
+    margin-left: 630px;
+    text-align: left;
+    color:white;
+}
+.button{
+    margin-top: 630px;
+    position: absolute;
+    margin-left: 850px;
+    color: #93d4d7;
+    cursor: pointer;
+    font-weight: bold;
+    
+}
