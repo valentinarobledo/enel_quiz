@@ -50,7 +50,7 @@ img{
         font-size: 12px;
     }
     .container{
-        margin-top:430px;
+        margin-top:410px;
         margin-left:20px;
     }
     .imagenes_finish{
@@ -58,5 +58,11 @@ img{
         margin-top:60px;
         position: absolute;
         transform: scale(0.8);
+    }
+    .titulo{
+        margin-top:20px;
+    }
+    .text{
+        margin-top:-12px;
     }
 }

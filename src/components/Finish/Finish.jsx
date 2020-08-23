@@ -10,6 +10,13 @@ import hab5 from './hab5.png';
 import hab6 from './hab6.png';
 
 const Finish  = ({...props})=> {
+    const click = ()=>{
+        var e = document.getElementById("titulo_finish").remove();
+        var a = document.getElementById("text_finish").remove();
+        var bu = document.getElementById("options").remove();
+        var info = '<div class="info">¡Gracias por participar y recuerda los tips que te hemos dado para juntos construir un mundo más sostenible!</div>';
+        $(".background").append(info);
+    }
 const hab_1 = hab1
 const hab_2 = hab2
 const hab_3 = hab3
@@ -28,14 +35,16 @@ const hab_6 = hab6
                 {imagen}
             </div>
             <div className="container">
-                <div className="titulo">
+                <div className="titulo" id="titulo_finish">
                     Gracias por ayudar a iluminar este hogar
                 </div>
-                <div className="text">
+                <div className="text" id="text_finish">
                 ¿Quieres saber como podemos construir un mundo más sostenible?
                 </div>
-                <div ><a className="a" href="http://consola-event.center/enel/registro/">Sí</a></div>
-                <div ><a className="a" href="">No</a></div>
+                <div id="options">
+                    <div ><a className="a" href="http://encuentroscolombia2020.com/registro/">Sí</a></div>
+                    <div ><a className="a" onClick={click} >No</a></div>
+                </div>
             </div>     
         </div>
 
