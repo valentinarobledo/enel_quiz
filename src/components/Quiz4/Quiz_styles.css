@@ -39,3 +39,40 @@ body{
     font-weight: bold;
     
 }
+img{
+    position:absolute;
+}
+.imagenes_quiz1{
+    margin-left: 120px;
+    margin-top:8px;
+    position: absolute;
+}
+@media (max-width:760px){
+    .background{
+        background: url('./bg1.jpg');
+        background-size: contain;
+        font-size: 12px;
+    }
+    .pregunta4{
+        margin-top: 440px;
+        width:350px;
+        margin-left:-5px;
+        position: absolute;
+        text-align: center;
+        color:white;
+        font-weight: bold;
+    }
+    .radio4{
+        margin-top: 480px;
+        position: absolute;
+        margin-left:120px;
+        text-align: left;
+        color:white;
+    }
+    .imagenes_quiz1{
+        margin-left: -305px;
+        margin-top:60px;
+        position: absolute;
+        transform: scale(0.8);
+    }
+}

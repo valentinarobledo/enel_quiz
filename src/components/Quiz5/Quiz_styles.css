@@ -39,3 +39,50 @@ body{
     font-weight: bold;
     
 }
+img{
+    position:absolute;
+}
+.imagenes_quiz1{
+    margin-left: 120px;
+    margin-top:8px;
+    position: absolute;
+}
+@media (max-width:760px){
+    .background{
+        background: url('./bg1.jpg');
+        background-size: contain;
+        font-size: 12px;
+    }
+    .pregunta5{
+        margin-top: 432px;
+        width:365px;
+        margin-left:-5px;
+        position: absolute;
+        text-align: center;
+        color:white;
+        font-weight: bold;
+    }
+    .radio5
+    {
+        margin-top: 480px;
+        position: absolute;
+        margin-left: 50px;
+        text-align: left;
+        color:white;
+    }
+    .button{
+        margin-top: 530px !important;
+        position: absolute;
+        margin-left: 280px !important;
+        color: #93d4d7;
+        cursor: pointer;
+        font-weight: bold;
+        
+    }
+    .imagenes_quiz1{
+        margin-left: -305px;
+        margin-top:60px;
+        position: absolute;
+        transform: scale(0.8);
+    }
+}

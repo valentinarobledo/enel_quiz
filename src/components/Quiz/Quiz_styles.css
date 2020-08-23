@@ -10,7 +10,7 @@ body{
     background-position: center !important;
     background: url('./background.jpg');
     background-repeat:no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
@@ -24,9 +24,9 @@ body{
     font-weight: bold;
 }
 .radio{
-    margin-top: 530px;
+    margin-top: 550px;
     position: absolute;
-    margin-left: 650px;
+    margin-left: 580px;
     text-align: left;
     color:white;
 }
@@ -38,4 +38,36 @@ body{
     cursor: pointer;
     font-weight: bold;
     
+}
+@media (max-width:760px){
+    .background{
+        background: url('./bg1.jpg');
+        background-size: contain;
+        font-size: 12px;
+    }
+    .pregunta{
+        margin-top: 430px;
+        width:350px;
+        margin-left:-5px;
+        position: absolute;
+        text-align: center;
+        color:white;
+        font-weight: bold;
+    }
+    .radio{
+        margin-top: 460px;
+        position: absolute;
+        margin-left: 70px;
+        text-align: left;
+        color:white;
+    }
+    .button{
+        margin-top: 520px !important;
+        position: absolute;
+        margin-left: 250px !important;
+        color: #93d4d7;
+        cursor: pointer;
+        font-weight: bold;
+        
+    }
 }

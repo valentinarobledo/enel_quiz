@@ -1,11 +1,14 @@
 import React from "react";
 import "./Home_style.css";
 
+
 const Home  = ({...props})=> {
     return(
         <div className="intro">
-            <div className="ingresar">
-            </div>
+            <a href="#/quiz">
+                <div className="ingresar">
+                </div>
+            </a>
         </div>
     );
 };

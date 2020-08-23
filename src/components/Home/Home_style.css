@@ -10,15 +10,56 @@ body{
     background-position: center !important;
     background: url('./INTRO.jpg');
     background-repeat:no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 100%;
     height: 100vh;
 }
 .ingresar{
     width: 300px;
-    height: 50px;
-    cursor:pointer;
-    margin-top: 600px;
-    margin-left: 550px;
+    height: 60px;
+    margin-top: 630px;
+    margin-left: 552px;
     position: absolute;
+}
+@media (max-width:1000px){
+    .ingresar{
+        margin-top: 980px;
+        margin-left:380px;
+    }
+}
+@media (max-width:1030px){
+    .ingresar{
+        margin-top: 1200px;
+        margin-left:320px;
+    }
+}
+@media (max-width:800px){
+    .ingresar{
+        margin-top: 900px;
+        margin-left:200px;
+    }
+}
+@media (max-width:400px){
+    .intro{
+        background: url('./bg_intro.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .ingresar{
+        margin-top: 400px;
+        margin-left: 40px;
+        height:200px;
+    }
+}
+@media (max-width:760px){
+    .intro{
+        background: url('./bg_intro.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .ingresar{
+        margin-top: 450px;
+        margin-left: 40px;
+        height:300px;
+    }
 }

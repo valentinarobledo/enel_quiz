@@ -30,6 +30,7 @@ import Quiz2 from "./components/Quiz2";
 import Quiz3 from "./components/Quiz3";
 import Quiz4 from "./components/Quiz4";
 import Quiz5 from "./components/Quiz5";
+import Finish from "./components/Finish";
 const App = () => {
   return (
     <>
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/quiz3" component={Quiz3} />
           <Route path="/quiz4" component={Quiz4} />
           <Route path="/quiz5" component={Quiz5} />
+          <Route path="/finish" component={Finish} />
         </HashRouter>
     </>
   ); // La etiqueta <> </> Hace referencia a los fragments en react
