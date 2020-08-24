@@ -19,24 +19,18 @@ const Quiz  = ({...props})=> {
                    var e = document.getElementById("pregunta").remove();
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
-                   var error = '<div class="titulo_incorrecto">INCORRECTO</div>';
+                   var co = document.getElementById("caja").remove();
+                   var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div>';
                    $(".background").append(error);
-                   var tip = '<div class="tip6">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div>';
-                   $(".background").append(tip);
-                   var finish = '<div class="next6"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div>';
-                   $(".background").append(finish);
                 }
                 else{
                     data[5].correcto=1;
                     var e = document.getElementById("pregunta").remove();
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
-                    var titulo = '<div class="titulo_correcto">CORRECTO</div>';
-                    $(".background").append(titulo);
-                    var tip = '<div class="tip6">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div>';
+                    var co = document.getElementById("caja").remove();
+                   var tip = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div>';
                    $(".background").append(tip);
-                   var finish = '<div class="next6"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div>';
-                   $(".background").append(finish);
                 }
             }
         }
@@ -58,15 +52,17 @@ const Quiz  = ({...props})=> {
             <div className="imagenes_quiz1">
                 {imagen}
             </div>
-            <div className="pregunta5" id="pregunta">
-            ¿El Grupo Enel en Colombia ofrece más de 50 beneficios de Calidad de Vida para sus trabajadores, ¿cuáles de los siguientes hacen parte de ese listado?
+            <div className="container_quiz1" id="caja">
+                <div className="pregunta5" id="pregunta">
+                ¿El Grupo Enel en Colombia ofrece más de 50 beneficios de Calidad de Vida para sus trabajadores, ¿cuáles de los siguientes hacen parte de ese listado?
+                </div>
+                <div className="radio5" id="radio">
+                    <input value="0" type="radio" name="pregunta1"/><label>Día de balance (1 día libre cada 4 meses)</label><br></br>
+                    <input value="0" type="radio" name="pregunta1"/><label>Jornada comprimida los viernes hasta las 2:00 p.m</label><br></br>
+                    <input value="1" type="radio" name="pregunta1"/><label>Todas las anteriores</label>
+                </div>
+                <div id="button" className="button6" onClick={click}>SIGUIENTE</div>
             </div>
-            <div className="radio5" id="radio">
-                <input value="0" type="radio" name="pregunta1"/><label>Día de balance (1 día libre cada 4 meses)</label><br></br>
-                <input value="0" type="radio" name="pregunta1"/><label>Jornada comprimida los viernes hasta las 2:00 p.m</label><br></br>
-                <input value="1" type="radio" name="pregunta1"/><label>Todas las anteriores</label>
-            </div>
-            <div id="button" className="button" onClick={click}>SIGUIENTE</div>
         </div>
 
 

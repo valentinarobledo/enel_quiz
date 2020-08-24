@@ -19,24 +19,19 @@ const Quiz  = ({...props})=> {
                    var e = document.getElementById("pregunta").remove();
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
-                   var error = '<div class="titulo_incorrecto">INCORRECTO</div>';
-                   $(".background").append(error);
-                   var tip = '<div class="tip5">Los tenedores y los rack del secado son una opción amigable con el planeta. Las secadoras de rop producen gran cantidad de CO2, al no utilizarlas bajas el consumo de electricidad (y la cuenta), dejas de producir dióxido de carbono y además tienes al mejor aliado quitamanchas que existe: El sol   </div>';
-                   $(".background").append(tip);
-                   var next = '<div class="next5"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz5">SIGUIENTE</a></div>';
-                   $(".background").append(next);
+                   var co = document.getElementById("caja").remove();
+                    var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Los tenedores y los rack del secado son una opción amigable con el planeta. Las secadoras de rop producen gran cantidad de CO2, al no utilizarlas bajas el consumo de electricidad (y la cuenta), dejas de producir dióxido de carbono y además tienes al mejor aliado quitamanchas que existe: El sol</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz5">SIGUIENTE</a></div></div>';
+                    $(".background").append(error);
                 }
                 else{
                     data[4].correcto=1;
                     var e = document.getElementById("pregunta").remove();
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
-                    var titulo = '<div class="titulo_correcto">CORRECTO</div>';
-                    $(".background").append(titulo);
-                    var tip = '<div class="tip5">Los tenedores y los rack del secado son una opción amigable con el planeta. Las secadoras de rop producen gran cantidad de CO2, al no utilizarlas bajas el consumo de electricidad (y la cuenta), dejas de producir dióxido de carbono y además tienes al mejor aliado quitamanchas que existe: El sol   </div>';
-                   $(".background").append(tip);
-                   var next = '<div class="next5"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz5">SIGUIENTE</a></div>';
-                   $(".background").append(next);
+                    var co = document.getElementById("caja").remove();
+                    var tip = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Los tenedores y los rack del secado son una opción amigable con el planeta. Las secadoras de rop producen gran cantidad de CO2, al no utilizarlas bajas el consumo de electricidad (y la cuenta), dejas de producir dióxido de carbono y además tienes al mejor aliado quitamanchas que existe: El sol</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz5">SIGUIENTE</a></div></div>';
+                    $(".background").append(tip);
+                   
                 }
             }
         }
@@ -58,15 +53,17 @@ const Quiz  = ({...props})=> {
              <div className="imagenes_quiz1">
                 {imagen}
             </div>
-            <div className="pregunta4" id="pregunta">
-            ¿Cuál es la central hidroeléctrica de mayor capacidad de generación en Colombia, operada por Enel-Emgesa?
+            <div className="container_quiz1" id="caja">
+                <div className="pregunta4" id="pregunta">
+                ¿Cuál es la central hidroeléctrica de mayor capacidad de generación en Colombia, operada por Enel-Emgesa?
+                </div>
+                <div className="radio4" id="radio">
+                    <input value="1" type="radio" name="pregunta1"/><label>Guavio</label><br></br>
+                    <input value="0" type="radio" name="pregunta1"/><label>Quimbo</label><br></br>
+                    <input value="0" type="radio" name="pregunta1"/><label>Paraíso</label>
+                </div>
+                <div  id="button" className="button5" onClick={click}>SIGUIENTE</div>
             </div>
-            <div className="radio4" id="radio">
-                <input value="1" type="radio" name="pregunta1"/><label>Guavio</label><br></br>
-                <input value="0" type="radio" name="pregunta1"/><label>Quimbo</label><br></br>
-                <input value="0" type="radio" name="pregunta1"/><label>Paraíso</label>
-            </div>
-            <div  id="button" className="button" onClick={click}>SIGUIENTE</div>
         </div>
 
 

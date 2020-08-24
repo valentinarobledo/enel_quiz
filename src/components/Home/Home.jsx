@@ -3,13 +3,10 @@ import "./Home_style.css";
 
 
 const Home  = ({...props})=> {
-    return(
-        <div className="intro">
+    return( 
             <a href="#/quiz">
-                <div className="ingresar">
-                </div>
+               <div className="intro"></div>
             </a>
-        </div>
     );
 };
 export default Home

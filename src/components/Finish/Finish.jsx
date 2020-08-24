@@ -14,7 +14,8 @@ const Finish  = ({...props})=> {
         var e = document.getElementById("titulo_finish").remove();
         var a = document.getElementById("text_finish").remove();
         var bu = document.getElementById("options").remove();
-        var info = '<div class="info">¡Gracias por participar y recuerda los tips que te hemos dado para juntos construir un mundo más sostenible!</div>';
+        var co = document.getElementById("caja").remove();
+        var info = '<div class="caja"><div class="info">¡Gracias por participar y recuerda los tips que te hemos dado para juntos construir un mundo más sostenible!</div></div>';
         $(".background").append(info);
     }
 const hab_1 = hab1
@@ -34,7 +35,7 @@ const hab_6 = hab6
             <div className="imagenes_finish">
                 {imagen}
             </div>
-            <div className="container">
+            <div className="container_quiz1" id="caja">
                 <div className="titulo" id="titulo_finish">
                     Gracias por ayudar a iluminar este hogar
                 </div>

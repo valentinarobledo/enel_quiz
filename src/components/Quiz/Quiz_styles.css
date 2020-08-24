@@ -10,64 +10,43 @@ body{
     background-position: center !important;
     background: url('./background.jpg');
     background-repeat:no-repeat;
-    background-size: cover;
+    background-size:contain;
     width: 100%;
     height: 100vh;
 }
-.pregunta{
-    margin-top: 490px;
-    width:400px;
-    margin-left: 500px;
+.container{
+    align-items: 'center';
+    justify-content: 'center';
+}
+.container_quiz1{
+    background: #487a95;
     position: absolute;
+    width: 550px;
+    height: 250px;
+    padding: 10px;
+    bottom:-27em;
+    top: 0;
+    right: 0;
+    margin: auto;
+    overflow: hidden;
+    left: 0;
+    border-radius: 20px;
     text-align: center;
-    color:white;
+}
+
+.pregunta, .radio {
+    color: #fff;
+    padding: 0.5em;
+}
+
+.pregunta {
+    text-align: center;
+    font-weight: 700;
+}
+.button1{
+    color:#93d4d7;
     font-weight: bold;
-}
-.radio{
-    margin-top: 550px;
-    position: absolute;
-    margin-left: 580px;
-    text-align: left;
-    color:white;
-}
-.button{
-    margin-top: 630px;
-    position: absolute;
-    margin-left: 850px;
-    color: #93d4d7;
+    text-align-last: right;
+    padding-right: 4.5em;
     cursor: pointer;
-    font-weight: bold;
-    
-}
-@media (max-width:760px){
-    .background{
-        background: url('./bg1.jpg');
-        background-size: contain;
-        font-size: 12px;
-    }
-    .pregunta{
-        margin-top: 430px;
-        width:350px;
-        margin-left:-5px;
-        position: absolute;
-        text-align: center;
-        color:white;
-        font-weight: bold;
-    }
-    .radio{
-        margin-top: 460px;
-        position: absolute;
-        margin-left: 70px;
-        text-align: left;
-        color:white;
-    }
-    .button{
-        margin-top: 520px !important;
-        position: absolute;
-        margin-left: 250px !important;
-        color: #93d4d7;
-        cursor: pointer;
-        font-weight: bold;
-        
-    }
 }

@@ -19,24 +19,19 @@ const Quiz  = ({...props})=> {
                    var e = document.getElementById("pregunta").remove();
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
-                   var error = '<div class="titulo_incorrecto">INCORRECTO</div>';
+                   var co = document.getElementById("caja").remove();
+                   var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">El exceso de bolsas de plástico y empaques, así como mantener el congelador con hielo, hace que tu aparato necesite más potencia para enfriar, y con ello gasta más electricidad.</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz4">SIGUIENTE</a></div></div>';
                    $(".background").append(error);
-                   var tip = '<div class="tip4">El exceso de bolsas de plástico y empaques, así como mantener el congelador con hielo, hace que tu aparato necesite más potencia para enfriar, y con ello gasta más electricidad.</div>';
-                   $(".background").append(tip);
-                   var next = '<div class="next4"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz4">SIGUIENTE</a></div>';
-                   $(".background").append(next);
                 }
                 else{
                     data[3].correcto=1;
                     var e = document.getElementById("pregunta").remove();
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
-                    var titulo = '<div class="titulo_correcto">CORRECTO</div>';
-                    $(".background").append(titulo);
-                    var tip = '<div class="tip4">El exceso de bolsas de plástico y empaques, así como mantener el congelador con hielo, hace que tu aparato necesite más potencia para enfriar, y con ello gasta más electricidad.</div>';
-                   $(".background").append(tip);
-                   var next = '<div class="next4"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz4">SIGUIENTE</a></div>';
-                   $(".background").append(next);
+                    var co = document.getElementById("caja").remove();
+                    var tip = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">El exceso de bolsas de plástico y empaques, así como mantener el congelador con hielo, hace que tu aparato necesite más potencia para enfriar, y con ello gasta más electricidad.</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz4">SIGUIENTE</a></div></div>';
+                    $(".background").append(tip);
+                   
                 }
             }
         }
@@ -58,15 +53,17 @@ const Quiz  = ({...props})=> {
             <div className="imagenes_quiz1">
                 {imagen}
             </div>
-            <div className="pregunta3" id="pregunta">
-            Cómo se llama el dron utilizado por Enel-Codensa en su operación para eliminar elementos extraños en la red
+            <div className="container_quiz1" id="caja">
+                <div className="pregunta3" id="pregunta">
+                Cómo se llama el dron utilizado por Enel-Codensa en su operación para eliminar elementos extraños en la red
+                </div>
+                <div className="radio3" id="radio">
+                    <input value="0" type="radio" name="pregunta1"/><label>Dron Luciérnaga</label><br></br>
+                    <input value="1" type="radio" name="pregunta1"/><label>Dron Dragón</label><br></br>
+                    <input value="0" type="radio" name="pregunta1"/><label>Dron destructor</label><br></br>
+                </div>
+                <div id="button" className="button4" onClick={click}>SIGUIENTE</div>
             </div>
-            <div className="radio3" id="radio">
-                <input value="0" type="radio" name="pregunta1"/><label>Dron Luciérnaga</label><br></br>
-                <input value="1" type="radio" name="pregunta1"/><label>Dron Dragón</label><br></br>
-                <input value="0" type="radio" name="pregunta1"/><label>Dron destructor</label><br></br>
-            </div>
-            <div id="button" className="button" onClick={click}>SIGUIENTE</div>
         </div>
 
 
