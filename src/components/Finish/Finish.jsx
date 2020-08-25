@@ -15,7 +15,7 @@ const Finish  = ({...props})=> {
         var a = document.getElementById("text_finish").remove();
         var bu = document.getElementById("options").remove();
         var co = document.getElementById("caja").remove();
-        var info = '<div class="caja"><div class="info">¡Gracias por participar y recuerda los tips que te hemos dado para juntos construir un mundo más sostenible!</div></div>';
+        var info = '<div class="app"><div class="caja"><div class="info">¡Gracias por participar y recuerda los tips que te hemos dado para juntos construir un mundo más sostenible!</div></div></div>';
         $(".background").append(info);
     }
 const hab_1 = hab1
@@ -27,26 +27,30 @@ const hab_6 = hab6
     
     const imagen = data.map((respuesta,i) => {
             return(
-                <img style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img" + (i+1)+"_quiz1"} src={eval("hab_"+(i+1))} alt="hab1"/>
+                <img width="830" height="380" style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img_quiz1"} src={eval("hab_"+(i+1))} alt="hab6"/>
             );
         });
     return(
         <div className="background">
-            <div className="imagenes_finish">
-                {imagen}
-            </div>
-            <div className="container_quiz1" id="caja">
-                <div className="titulo" id="titulo_finish">
-                    Gracias por ayudar a iluminar este hogar
+            <div className="app">
+                <div className="img_container">
+                    <div className="imagenes">
+                        {imagen}
+                    </div>
                 </div>
-                <div className="text" id="text_finish">
-                ¿Quieres saber como podemos construir un mundo más sostenible?
-                </div>
-                <div id="options">
-                    <div ><a className="a" href="http://encuentroscolombia2020.com/registro/">Sí</a></div>
-                    <div ><a className="a" onClick={click} >No</a></div>
-                </div>
-            </div>     
+                <div className="container_quiz1" id="caja">
+                    <div className="titulo" id="titulo_finish">
+                        Gracias por ayudar a iluminar este hogar
+                    </div>
+                    <div className="text" id="text_finish">
+                    ¿Quieres saber como podemos construir un mundo más sostenible?
+                    </div>
+                    <div id="options">
+                        <div ><a className="a" href="http://encuentroscolombia2020.com/registro/">Sí</a></div>
+                        <div ><a className="a" onClick={click} >No</a></div>
+                    </div>
+                </div>    
+            </div> 
         </div>
 
 

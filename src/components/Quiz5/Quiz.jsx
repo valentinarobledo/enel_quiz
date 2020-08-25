@@ -20,7 +20,7 @@ const Quiz  = ({...props})=> {
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
                    var co = document.getElementById("caja").remove();
-                   var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div>';
+                   var error = '<div class="app"><div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div></div>';
                    $(".background").append(error);
                 }
                 else{
@@ -29,7 +29,7 @@ const Quiz  = ({...props})=> {
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
                     var co = document.getElementById("caja").remove();
-                   var tip = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div>';
+                   var tip = '<div class="app"><div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Ya se trate de cerdo, res o aves, el proceso para llevarlos a tu mesa gasta una gran cantidad de energía </div><div class="next"><a href="#/finish" style="color:#93d4d7; text-decoration:none;">FINALIZAR</a></div></div></div>';
                    $(".background").append(tip);
                 }
             }
@@ -44,24 +44,28 @@ const Quiz  = ({...props})=> {
     
     const imagen = data.map((respuesta,i) => {
             return(
-                <img style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img" + (i+1)+"_quiz1"} src={eval("hab_"+(i+1))} alt="hab1"/>
+                <img width="830" height="380" style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img_quiz1"} src={eval("hab_"+(i+1))} alt="hab5"/>
             );
         });
     return(
         <div className="background">
-            <div className="imagenes_quiz1">
-                {imagen}
-            </div>
-            <div className="container_quiz1" id="caja">
-                <div className="pregunta5" id="pregunta">
-                ¿El Grupo Enel en Colombia ofrece más de 50 beneficios de Calidad de Vida para sus trabajadores, ¿cuáles de los siguientes hacen parte de ese listado?
+            <div className="app">
+                <div className="img_container">
+                    <div className="imagenes">
+                        {imagen}
+                    </div>
                 </div>
-                <div className="radio5" id="radio">
-                    <input value="0" type="radio" name="pregunta1"/><label>Día de balance (1 día libre cada 4 meses)</label><br></br>
-                    <input value="0" type="radio" name="pregunta1"/><label>Jornada comprimida los viernes hasta las 2:00 p.m</label><br></br>
-                    <input value="1" type="radio" name="pregunta1"/><label>Todas las anteriores</label>
+                <div className="container_quiz1" id="caja">
+                    <div className="pregunta5" id="pregunta">
+                    ¿El Grupo Enel en Colombia ofrece más de 50 beneficios de Calidad de Vida para sus trabajadores, ¿cuáles de los siguientes hacen parte de ese listado?
+                    </div>
+                    <div className="radio5" id="radio">
+                        <input value="0" type="radio" name="pregunta1"/><label>Día de balance (1 día libre cada 4 meses)</label><br></br>
+                        <input value="0" type="radio" name="pregunta1"/><label>Jornada comprimida los viernes hasta las 2:00 p.m</label><br></br>
+                        <input value="1" type="radio" name="pregunta1"/><label>Todas las anteriores</label>
+                    </div>
+                    <div id="button" className="button6" onClick={click}>SIGUIENTE</div>
                 </div>
-                <div id="button" className="button6" onClick={click}>SIGUIENTE</div>
             </div>
         </div>
 

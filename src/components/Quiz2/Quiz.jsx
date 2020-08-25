@@ -20,7 +20,7 @@ const Quiz  = ({...props})=> {
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
                    var co = document.getElementById("caja").remove();
-                   var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Busca tener presente siempre el significado de las 3 erres y procura aplicarlas siempre que puedas: Reduce, Reutiliza y Recicla</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz3">SIGUIENTE</a></div></div>';
+                   var error = '<div class="app"><div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Busca tener presente siempre el significado de las 3 erres y procura aplicarlas siempre que puedas: Reduce, Reutiliza y Recicla</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz3">SIGUIENTE</a></div></div></div>';
                    $(".background").append(error);
                 }
                 else{
@@ -29,7 +29,7 @@ const Quiz  = ({...props})=> {
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
                     var co = document.getElementById("caja").remove();
-                    var tip = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Busca tener presente siempre el significado de las 3 erres y procura aplicarlas siempre que puedas: Reduce, Reutiliza y Recicla</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz3">SIGUIENTE</a></div></div>';
+                    var tip = '<div class="app"><div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Busca tener presente siempre el significado de las 3 erres y procura aplicarlas siempre que puedas: Reduce, Reutiliza y Recicla</div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz3">SIGUIENTE</a></div></div></div>';
                     $(".background").append(tip);
 
                 }
@@ -45,24 +45,28 @@ const hab_6 = hab6
 
 const imagen = data.map((respuesta,i) => {
         return(
-            <img style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img" + (i+1)+"_quiz1"} src={eval("hab_"+(i+1))} alt="hab1"/>
+            <img width="830" height="380" style={{display:respuesta.correcto===0 ? "none":"block"}} className={"img_quiz1"} src={eval("hab_"+(i+1))} alt="hab2"/>
         );
     });
     return(
         <div className="background">
-             <div className="imagenes_quiz1">
-                {imagen}
-            </div>
-            <div className="container_quiz1" id="caja">
-                <div className="pregunta2" id="pregunta">
-                En qué municipio está ubicado el parque solar más grande de Colombia desarrollado por Enel Green Power
+            <div className="app">
+                <div className="img_container">
+                    <div className="imagenes">
+                        {imagen}
+                    </div>
                 </div>
-                <div className="radio2" id="radio">
-                    <input value="0" type="radio" name="pregunta1"/><label>El Triunfo, Cundinamarca </label><br></br>
-                    <input value="0" type="radio" name="pregunta1"/><label>El Colegio, Cundinamarca </label><br></br>
-                    <input value="1" type="radio" name="pregunta1"/><label>El Paso, Cesar</label>
+                <div className="container_quiz1" id="caja">
+                    <div className="pregunta2" id="pregunta">
+                    En qué municipio está ubicado el parque solar más grande de Colombia desarrollado por Enel Green Power
+                    </div>
+                    <div className="radio2" id="radio">
+                        <input value="0" type="radio" name="pregunta1"/><label>El Triunfo, Cundinamarca </label><br></br>
+                        <input value="0" type="radio" name="pregunta1"/><label>El Colegio, Cundinamarca </label><br></br>
+                        <input value="1" type="radio" name="pregunta1"/><label>El Paso, Cesar</label>
+                    </div>
+                    <div id="button" className="button3" onClick={click}>SIGUIENTE</div>
                 </div>
-                <div id="button" className="button3" onClick={click}>SIGUIENTE</div>
             </div>
         </div>
 

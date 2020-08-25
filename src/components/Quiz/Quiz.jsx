@@ -15,7 +15,7 @@ const Quiz  = ({...props})=> {
                    var a = document.getElementById("radio").remove();
                    var bu = document.getElementById("button").remove();
                    var co = document.getElementById("caja").remove();
-                   var error = '<div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Muchos trayectos no justifican el uso del automovil, ¿Por qué no mejorar de paso tu salud recurriendo más a la bicicleta? (Considera también el transporte público) </div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz1">SIGUIENTE</a></div></div>';
+                   var error = '<div class="app"><div class="caja"><div class="titulo_incorrecto">INCORRECTO</div><div class="tip">Muchos trayectos no justifican el uso del automovil, ¿Por qué no mejorar de paso tu salud recurriendo más a la bicicleta? (Considera también el transporte público) </div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz1">SIGUIENTE</a></div></div></div>';
                    $(".background").append(error);
                 }
                 else{
@@ -24,7 +24,7 @@ const Quiz  = ({...props})=> {
                     var a = document.getElementById("radio").remove();
                     var bu = document.getElementById("button").remove();
                     var co = document.getElementById("caja").remove();
-                    var error = '<div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Muchos trayectos no justifican el uso del automovil, ¿Por qué no mejorar de paso tu salud recurriendo más a la bicicleta? (Considera también el transporte público) </div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz1">SIGUIENTE</a></div></div>';
+                    var error = '<div class="app"><div class="caja"><div class="titulo_correcto">CORRECTO</div><div class="tip">Muchos trayectos no justifican el uso del automovil, ¿Por qué no mejorar de paso tu salud recurriendo más a la bicicleta? (Considera también el transporte público) </div><div class="next"><a style="color:#93d4d7; text-decoration:none;" href="#/quiz1">SIGUIENTE</a></div></div></div>';
                    $(".background").append(error);
                    
                 }
@@ -33,7 +33,8 @@ const Quiz  = ({...props})=> {
     }
     return(
         <div className="background">
-            <div className="container">
+            <div className="app">
+                <div className="img_container"></div>
                 <div className="container_quiz1" id="caja">
                     <div className="pregunta" id="pregunta">
                     ¿Cuál es la primera palabra en la que piensas cuando te hablan del GRUPO ENEL?
@@ -49,6 +50,7 @@ const Quiz  = ({...props})=> {
                     <div id="button" className="button1" onClick={click}>SIGUIENTE</div>
                 </div>
             </div>
+            
         </div>
 
 
