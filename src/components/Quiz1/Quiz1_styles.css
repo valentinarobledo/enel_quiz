@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding:0;
     height: 100vh;
+    font-size:14px;
 }
 #root{
     height: 100%;
@@ -32,7 +33,11 @@ body{
     bottom: -2.5em;
 }
 .pregunta1{
-    padding-top:6em;
+    padding-top: 9em;
+    padding-left: 2em;
+    padding-right: 2em;
+    text-align: center;
+    font-weight: 700;
 }
 .radio1{
     padding-top:0.5em;
@@ -41,19 +46,15 @@ body{
     color: #fff;
 }
 .img_quiz1{
-    padding-right: 9em;
-    padding-bottom: -1em;
-}
-.pregunta1{
-    text-align: center;
-    font-weight: 700;
-    padding-top:6em;
+    padding-right:11.5em;
+    padding-bottom:0em;
 }
 .button2{
     color:#93d4d7;
     font-weight: bold;
     text-align-last: right;
     padding-right: 4.5em;
+    margin-top:-2em;
     cursor: pointer;
 }
 .img_container{

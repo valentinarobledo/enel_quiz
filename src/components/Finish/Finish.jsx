@@ -46,7 +46,7 @@ const hab_6 = hab6
                     ¿Quieres saber como podemos construir un mundo más sostenible?
                     </div>
                     <div id="options">
-                        <div ><a className="a" href="http://encuentroscolombia2020.com/registro/">Sí</a></div>
+                        <div ><a className="a" href="http://triviaenel.net.s3-website-us-east-1.amazonaws.com/registro/">Sí</a></div>
                         <div ><a className="a" onClick={click} >No</a></div>
                     </div>
                 </div>    

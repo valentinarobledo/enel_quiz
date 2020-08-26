@@ -35,15 +35,16 @@
 .pregunta {
     text-align: center;
     font-weight: 700;
-    padding-top:5.5em;
-    padding-right:1em;
-    padding-left:1em;
+    padding-top:8.5em;
+    padding-right:3em;
+    padding-left:3em;
 }
 .button1{
     color:#93d4d7;
     font-weight: bold;
     text-align-last: right;
     padding-right: 4.5em;
+    margin-top:-2em;
     cursor: pointer;
 }
 @media(min-width:2880px){
