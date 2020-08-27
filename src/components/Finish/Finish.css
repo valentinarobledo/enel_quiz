@@ -55,7 +55,7 @@ img{
         bottom:30em !important;
     }
 }
-@media(min-width:1920px){
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .img_container{
         top:20em;
     }

@@ -15,7 +15,7 @@ body{
     height: 100vh;
 }
 
-@media (max-width:800px){
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3){
     .intro{
         background: url('./bg_intro.jpg');
         background-repeat: no-repeat;

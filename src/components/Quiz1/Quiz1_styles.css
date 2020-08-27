@@ -46,7 +46,7 @@ body{
     color: #fff;
 }
 .img_quiz1{
-    padding-right:11.5em;
+    padding-right:9.8em;
     padding-bottom:0em;
 }
 .button2{
@@ -73,19 +73,19 @@ body{
         bottom:30em !important;
     }
 }
-@media(min-width:1920px){
+@media only screen and (min-width: 1824px){
     .img_container{
         top:20em;
     }
     .container_quiz1{
-        bottom:4em;
+        bottom:4em !important;
     }
 }
-@media(max-width:420px){
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
     .app{
         left:5em;
     }
     body{
     background: url('./bg1.jpg');
     }
-}
+  }
